@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true
+  },
+  "extends": [
+//    "eslint:recommended",
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": [
+    "jsdoc"
+  ],
+  "globals": {
+    "crystal": false
+  },
+  "rules": {
+    // Basic
+    "indent": ["error", 4],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+
+    // Our Custom
+    "import/no-extraneous-dependencies": 0,
+//    "no-console": "off",
+    "class-methods-use-this": 0,
+//    "class-methods-use-this": ["error", { "exceptMethods": ["exportSubmit", "initSelect2", "initDataTables", "ready", "editAttrValueModal"] }],
+
+    // JSDoc Plugin
+    "jsdoc/check-param-names": 1,
+    "jsdoc/check-tag-names": 1,
+    "jsdoc/check-types": 1,
+    "jsdoc/newline-after-description": 1,
+    "jsdoc/require-param": 1,
+    "jsdoc/require-param-type": 1,
+    "jsdoc/require-returns-type": 1,
+    "jsdoc/require-description-complete-sentence": 1,
+    "jsdoc/require-hyphen-before-param-description": 1,
+    "jsdoc/require-param-description": 1,
+    "jsdoc/require-returns-description": 1
+    // Disabled
+  }
+}
